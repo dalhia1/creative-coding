@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GeometriqueMove : MonoBehaviour
 {
-    public int angles;
+    public int my_angles;
 
-    public int moveLenght;
+    public int my_moveLenght;
 
-    public int speed;
+    public int my_speed;
     public GameObject child;
 
     private float clock;
@@ -26,15 +26,15 @@ public class GeometriqueMove : MonoBehaviour
     {
         if (targetPosition == transform.position)
         {
-            if (rotationDone == angles)
+            if (rotationDone == my_angles)
             {
                 return;
             }
-            transform.Rotate(0,360/angles,0,Space.Self);
-            targetPosition = transform.position + transform.forward * moveLenght;
+            transform.Rotate(0,360/my_angles,0,Space.Self);
+            targetPosition = transform.position + transform.forward * my_moveLenght;
             rotationDone += 1;
         }
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, my_speed * Time.deltaTime);
         clock += Time.deltaTime;
         if (clock > 2)
         {
