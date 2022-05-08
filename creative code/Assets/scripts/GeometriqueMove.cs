@@ -45,8 +45,6 @@ public class GeometriqueMove : MonoBehaviour
             
         targetPosition = transform.position;
         
-        
-        
         clock = 0;
         firsttime = true;
         
@@ -77,13 +75,25 @@ public class GeometriqueMove : MonoBehaviour
             rotationDone += 1;
         }
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, my_speed * Time.deltaTime);
-        clock += Time.deltaTime;
-        if (clock > 2)
+        clock -= Time.deltaTime;
+        if (clock < 0)
         {
-            clock = 0;
+            
+            // yourPrefab.gameObject.SetActive(false);
+            // GameObject go = Instantiate( yourPrefab );
+            // // do stuff
+            // // The Start() callback now knows all you did before.
+            // go.SetActive ( true );
+            // yourPrefab.gameObject.SetActive( true );
+            //
+            
+            clock = 2;
+            //child.gameObject.SetActive(false);
             newChild = Instantiate(child,this.transform.position,this.transform.rotation);
             childMove compo = newChild.GetComponent<childMove>();
+            compo.center = centerObject;
             m_MyEvent.AddListener(compo.OnEventStart);
+            newChild.SetActive(true);
         }
     }
 }
