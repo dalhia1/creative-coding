@@ -25,9 +25,10 @@ public class childMove : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, my_speed * Time.deltaTime);
     }
 
-    void OnEventStart()
+    public void OnEventStart()
     {
         my_speed = storedSpeed;
+        Debug.Log("event receive" + my_speed);
         
     }
     

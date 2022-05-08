@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3c4dabb6970c24896cfe0e7e83a27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveLenght: 1
-  speed: 1
+  my_moveLenght: 5
+  my_speed: 1
 --- !u!1 &8896120461279306536
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 1000
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
