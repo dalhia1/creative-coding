@@ -113,6 +113,9 @@ MonoBehaviour:
   my_moveLenght: 5
   my_speed: 1
   center: {fileID: 0}
+  normalDeplacement: {x: 0, y: 0, z: 0}
+  couleur1: {fileID: 2100000, guid: 19f1d0b704afe4440aa6f150b9dce9bb, type: 2}
+  couleur2: {fileID: 2100000, guid: b5fbb3a7a62f3bc458c6de128bb3cd8b, type: 2}
 --- !u!54 &134659584476711103
 Rigidbody:
   m_ObjectHideFlags: 0
